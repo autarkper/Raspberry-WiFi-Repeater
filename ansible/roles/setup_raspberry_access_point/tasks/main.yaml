@@ -71,15 +71,15 @@
     state: absent
   when: hostapd_link_exists.stat.exists
 
-- name: Access Point | Restart hostapd, dnsmasq and enable them
-  systemd:
-    state: restarted
-    daemon_reload: yes
-    name: "{{ item }}.service"
-    enabled: yes
-  with_items:
-    - hostapd
-    - dnsmasq
+#- name: Access Point | Restart hostapd, dnsmasq and enable them
+#  systemd:
+#    state: restarted
+#    daemon_reload: yes
+#    name: "{{ item }}.service"
+#    enabled: yes
+#  with_items:
+#    - hostapd
+#    - dnsmasq
 
 - name: Access Point | Set sysctl.conf file
   template:
