@@ -82,5 +82,6 @@
     group: root
     mode: 644
 
-- name: Bridge | Reboot the machine
-  reboot:
+# uncomment the following if you want automatic reboot of target machine
+#- name: Bridge | Reboot the machine
+#  reboot:
